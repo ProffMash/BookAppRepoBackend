@@ -1,0 +1,28 @@
+###GET BBOKS
+GET http://localhost:8000/books
+
+###GET BOOS BY ID
+GET http://localhost:8000/books/av10
+
+###POST
+POST http://localhost:8000/books
+Content-Type: application/json
+
+{   "id":"az10",
+    "title": "Life Choices",
+    "author": "David Macharia",
+    "year": 2024
+}
+
+###DELETE
+DELETE  http://localhost:8000/books/av10
+
+###PUT
+PUT http://localhost:8000/books/az10
+Content-Type: application/json
+
+{   "id":"az10",
+    "title": "Memories",
+    "author": "Sam Altman",
+    "year": 2024
+}
