@@ -9,7 +9,7 @@ import { cors } from "hono/cors";
 const app = new Hono();
 
 app.use('*', cors({
-  origin: 'https://book-app-frontend-steel.vercel.app/', // Replace with your frontend URL
+  origin: 'http://localhost:5173', // Replace with your frontend URL
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 
