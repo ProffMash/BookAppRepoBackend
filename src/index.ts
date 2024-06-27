@@ -3,9 +3,15 @@ import { Hono } from 'hono';
 import "dotenv/config";
 import { booksRouter } from './books/books.router';
 import { readFileSync } from 'fs';
+import { cors } from "hono/cors";
 
 
 const app = new Hono();
+
+app.use('*', cors({
+  origin: 'http://localhost:8000', // Replace with your frontend URL
+  allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 
 // Route definitions for books database
 app.route("/books", booksRouter);
