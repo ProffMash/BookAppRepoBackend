@@ -8,10 +8,7 @@ import { cors } from "hono/cors";
 
 const app = new Hono();
 
-app.use('*', cors({
-  origin: 'https://book-app-frontend-steel.vercel.app/', // Replace with your frontend URL
-  allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
-}));
+app.use('/*', cors());
 
 // Route definitions for books database
 app.route("/books", booksRouter);
